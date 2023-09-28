@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DefaultPaddingX">
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <style name="RobotoMonoBold12sp">
+        <item name="android:fontFamily">@font/robotomonobold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="RobotoMonoRegular16sp">
+        <item name="android:fontFamily">@font/robotomonoregular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="VidalokaRegular20sp">
+        <item name="android:fontFamily">@font/vidalokaregular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="RobotoMonoBold16sp">
+        <item name="android:fontFamily">@font/robotomonobold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="RobotoMonoRegular12sp">
+        <item name="android:fontFamily">@font/robotomonoregular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
+        <item name="cornerSize">10%</item>
+    </style>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pale_green">#E5EBEA</color>
+    <color name="dark_green">#45503B</color>
+    <color name="highlight_pink">#DDC9C8</color>
+    <color name="accent_grey">#C2C6C5</color>
+    <color name="dusty_pink">#B098A4</color>  <!--also shadow colour-->
+    <color name="dark_pink">#5B3939</color>  <!--also shadow colour-->
+    <color name="red">#CD5E59</color>
+    <color name="light_grey">#D0D0D0</color>
+</resources>

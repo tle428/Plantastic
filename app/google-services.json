@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "11706539685",
+    "project_id": "se306-project-1-team-11",
+    "storage_bucket": "se306-project-1-team-11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11706539685:android:98bd08154b2967508eb74c",
+        "android_client_info": {
+          "package_name": "com.example.softeng306plantasticapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11706539685-uc4fjchqjsoohbg4no1q4vn09masossc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd3o3BVbiKD3kc3Sw734_Vp4dkliDK8nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11706539685-uc4fjchqjsoohbg4no1q4vn09masossc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

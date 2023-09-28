@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_green"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/DefaultPaddingX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/YourWishlistHeader"
+                        android:layout_width="20dp"
+                        android:layout_height="51dp"
+                        android:layout_gravity="left"
+                        android:layout_weight="3"
+                        android:padding="5dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/your_cart_header" />
+
+                    <ImageView
+                        android:id="@+id/clearButton"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:paddingTop="9dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/clearbutton" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cartActivityRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:background="@drawable/cart_total_border"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/GrandTotalLabel"
+                        style="@style/RobotoMonoBold12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Grand Total:"
+                        android:textColor="@color/dark_green"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="46dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/totalCost"
+                            style="@style/RobotoMonoBold12sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="$million"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/dark_green"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/GstLabel"
+                            style="@style/RobotoMonoRegular16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="GST included"
+                            android:textAlignment="gravity"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.widget.Button
+                    android:id="@+id/button"
+                    style="@style/RobotoMonoBold12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/checkout_button"
+                    android:padding="10dp"
+                    android:text="CHECKOUT"
+                    android:textColor="@color/pale_green"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/dark_green"
+        app:itemRippleColor="@color/highlight_pink"
+        app:itemTextColor="@color/dark_green"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

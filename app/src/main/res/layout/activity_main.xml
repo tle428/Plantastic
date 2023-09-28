@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/pale_green"
+    tools:context=".activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Make horizontal recyclerView -->
+            <LinearLayout
+                style="@style/DefaultPaddingX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="151dp"
+                    android:layout_height="43dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/shop_logo" />
+
+                <fragment
+                    android:id="@+id/fragment_container"
+                    android:name="com.example.softeng306plantasticapp.fragments.SearchbarFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/featuredItemsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp"
+                android:scrollbars="horizontal" />
+
+            <LinearLayout
+                style="@style/DefaultPaddingX"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="25dp">
+
+                <LinearLayout
+                    android:id="@+id/categoryCards"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="50"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            style="@style/RobotoMonoRegular16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Find the"
+                            android:textColor="@color/dark_green"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            style="@style/RobotoMonoBold16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:background="@drawable/categories_pink_small_highlight"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="perfect plant"
+                            android:textColor="@color/dark_green"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            style="@style/RobotoMonoRegular16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="for your indoor living space"
+                            android:textColor="@color/dark_green"
+                            android:textSize="20sp" />
+
+                        <FrameLayout
+                            android:id="@+id/categoryCardCacti"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:tag="cactiAndSucculents">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="280dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/category_cacti_image"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent">
+
+                            </com.google.android.material.imageview.ShapeableImageView>
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                style="@style/VidalokaRegular20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15sp"
+                                android:layout_marginTop="15sp"
+                                android:text="Cacti &amp;"
+                                android:textColor="@color/pale_green"
+                                android:textSize="32sp" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                style="@style/VidalokaRegular20sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="45sp"
+                                android:layout_marginRight="15sp"
+                                android:text="Succulents"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/pale_green"
+                                android:textSize="24sp" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="50"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:id="@+id/categoryCardFlowering"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:tag="floweringPlants">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="280dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/category_flower_image"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent">
+
+                            </com.google.android.material.imageview.ShapeableImageView>
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                style="@style/VidalokaRegular20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="210dp"
+                                android:text="Flowering"
+                                android:textColor="@color/pale_green"
+                                android:textSize="32sp" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                style="@style/VidalokaRegular20sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="240dp"
+                                android:layout_marginRight="15dp"
+                                android:text="Plants"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/pale_green"
+                                android:textSize="24sp" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/categoryCardFoliage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="60dp"
+                            android:tag="foliage">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="280dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/category_foliage_image"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent">
+
+                            </com.google.android.material.imageview.ShapeableImageView>
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                style="@style/VidalokaRegular20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="220dp"
+                                android:text="Foliage"
+                                android:textColor="@color/pale_green"
+                                android:textSize="40sp" />
+
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/RobotoMonoBold12sp"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:itemIconTint="@color/dark_green"
+        app:itemRippleColor="@color/highlight_pink"
+        app:itemTextColor="@color/dark_green"
+        app:menu="@menu/bottom_navigation_menu" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

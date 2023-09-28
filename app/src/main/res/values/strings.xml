@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Softeng306PlantasticApp</string>
+
+    <string name="next"></string>
+    <string name="lorem_ipsum"></string>
+    <string name="action_settings"></string>
+    <string name="first_fragment_label"></string>
+    <string name="second_fragment_label"></string>
+
+    <string-array name="scientific_names_txt">
+        <item>Homo sapiens</item>
+        <item>Homo sapiens2</item>
+        <item>Homo sapiens3</item>
+        <item>Homo sapiens4</item>
+        <item>Homo sapiens5</item>
+    </string-array>
+
+    <string-array name="names_txt">
+        <item>H </item>
+        <item> 2</item>
+        <item> 3</item>
+        <item> 4</item>
+        <item> 5</item>
+    </string-array>
+
+    <string-array name="prices_txt">
+        <item>$5.00</item>
+        <item>$6.00</item>
+        <item>$7.00</item>
+        <item>$8.00</item>
+        <item>$9.00</item>
+    </string-array>
+</resources>

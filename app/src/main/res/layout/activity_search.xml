@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/pale_green"
+    tools:context=".activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/DefaultPaddingX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp" >
+
+                <fragment
+                    android:id="@+id/fragment_container"
+                    android:name="com.example.softeng306plantasticapp.fragments.SearchbarFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/accent_grey"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/DefaultPaddingX"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/pale_green"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/searchAmountText"
+                        style="@style/RobotoMonoBold16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="number"
+                        android:textColor="@color/dark_green" />
+
+                    <TextView
+                        android:id="@+id/searchText"
+                        style="@style/RobotoMonoRegular16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" search results for"
+                        android:textColor="@color/dark_green" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/DefaultPaddingX"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="0"
+                    android:background="@color/pale_green"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/searchItemText"
+                        style="@style/RobotoMonoBold16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:background="@drawable/categories_pink_highlight"
+                        android:text="&quot;Item Name&quot;"
+                        android:textColor="@color/dark_green" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/DefaultPaddingX"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="75dp"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/searchActivityRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/noSearchItemMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="242dp"
+                    android:layout_height="242dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/light_grey"
+                    app:cardCornerRadius="121dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/sad_flower" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            style="@style/RobotoMonoRegular16sp"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:text="Sorry, we don’t have what you’re looking for :("
+                            android:textAlignment="center"
+                            android:textColor="@color/dark_green"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="75dp"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/dark_green"
+        app:itemRippleColor="@color/highlight_pink"
+        app:itemTextColor="@color/dark_green"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
